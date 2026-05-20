@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "axon-ads": {
+      "type": "sse",
+      "url": "https://ads.axon.ai/api/mcp"
+    }
+  }
+}
