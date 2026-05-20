@@ -4,20 +4,24 @@ This project configures Claude Code to use the [Axon Ads API](https://ads.axon.a
 
 ## MCP Server
 
-The Axon Ads MCP server is registered in `.claude/settings.json`:
+The Axon Ads MCP server is registered in `.claude/settings.json` for project-level access:
 
 ```json
 {
   "mcpServers": {
-    "axon-ads": {
-      "type": "sse",
+    "ads-manager-reports": {
+      "type": "http",
       "url": "https://ads.axon.ai/api/mcp"
     }
   }
 }
 ```
 
-Claude Code connects to this server automatically when you start a session in this project directory.
+To register it at the user level instead (available across all your projects), run:
+
+```bash
+claude mcp add --transport http "ads-manager-reports" "https://ads.axon.ai/api/mcp" --scope user
+```
 
 ## Authentication
 

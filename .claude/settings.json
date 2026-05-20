@@ -1,7 +1,7 @@
 {
   "mcpServers": {
-    "axon-ads": {
-      "type": "sse",
+    "ads-manager-reports": {
+      "type": "http",
       "url": "https://ads.axon.ai/api/mcp"
     }
   }
